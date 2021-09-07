@@ -11,11 +11,8 @@
   <mj-body v-if="messages && messages[0]" background-color="#ffffff">
     <!-- Header / Preview -->
     <mj-section>
-      <mj-column width="40%">
+      <mj-column width="100%">
         <mj-text font-size="10px">{{ title || messages[0].title }}</mj-text>
-      </mj-column>
-      <mj-column width="60%" v-if="url">
-        <mj-text font-size="10px" align="right">{{url}}</mj-text>
       </mj-column>
     </mj-section>
 
@@ -28,10 +25,10 @@
     <mj-section>
       <mj-column width="100%">
         <mj-text>
-          <h2 style="font-weight: bold; margin-top: 0; margin-bottom: 0"><a :href="`${organization.website}/announcements/${messages[0].slug}`" style="color: #3498DB; text-decoration: none">
+          <h2 style="font-weight: bold; margin-top: 0; margin-bottom: 0"><a :href="`${organization.website}/announcements/${messages[0].slug}`" :style="`color: ${organization.primaryColor}`">
               {{messages[0].title}}
             </a></h2>
-          <p>{{messages[0].summary}}</p>
+          <p v-html="messages[0].summary"></p>
         </mj-text>
       </mj-column>
     </mj-section>
@@ -50,7 +47,7 @@
 
       <mj-column width="75%">
         <mj-text>
-          <h3 style="font-weight: bold; margin-top: 0; margin-bottom: 0"> <a :href="`${organization.website}/announcements/${message.slug}`" style="color: #3498DB; text-decoration: none">
+          <h3 style="font-weight: bold; margin-top: 0; margin-bottom: 0"> <a :href="`${organization.website}/announcements/${message.slug}`" :style="`color: ${organization.primaryColor}`">
               {{message.title}}
             </a> </h3>
           <p style="font-size: 14px">{{message.summary}}</p>
