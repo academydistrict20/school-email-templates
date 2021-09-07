@@ -1,8 +1,8 @@
 <mjml>
   <mj-body>
-    <mj-section>
+    <mj-section v-if="messages[0]" >
       <mj-column>
-        <mj-image width="100px" v-if="messages[0] && messages[0].images.url" src="messages[0].images[0].url"></mj-image>
+        <mj-image width="100px" v-if="messages[0].firstImage" :src="firstImage.url"></mj-image>
         <mj-text >{{messages[0].title}}</mj-text>
         <mj-text>{{messages[0].summary}}</mj-text>
       </mj-column>
