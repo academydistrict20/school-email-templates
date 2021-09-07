@@ -26,7 +26,7 @@
       <mj-column width="100%">
         <mj-text>
           <h2 style="font-weight: bold; margin-top: 0; margin-bottom: 0"><a :href="`${organization.website}/announcements/${messages[0].slug}`" :style="`color: ${organization.primaryColor}; text-decoration: none;`">
-              {{messages[0].title}}
+              {{organization.title}}
             </a></h2>
           <p v-html="messages[0].summary"></p>
           <p><a :href="`${organization.website}/announcements/${messages[0].slug}`" :style="`color: ${organization.primaryColor}; text-decoration: none;`">
