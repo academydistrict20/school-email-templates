@@ -10,9 +10,9 @@
   </mj-head>
   <mj-body v-if="messages && messages[0]" background-color="#ffffff">
     <!-- Header / Preview -->
-    <mj-section :background-color="organization.primaryColor" >
+    <mj-section :background-color="organization.secondary" >
       <mj-column width="100%">
-        <mj-text :color="white" font-size="10px">{{ title || organization.title }}</mj-text>
+        <mj-text color="white" font-size="10px">{{ title || organization.title }}</mj-text>
       </mj-column>
     </mj-section>
 
