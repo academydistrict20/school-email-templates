@@ -2,16 +2,15 @@
   <mj-body>
     <mj-section>
       <mj-column>
-        <mj-image width="100px" v-if="message[0] && message[0].images.url" src="messages[0].images.url"></mj-image>
+        <mj-image width="100px" v-if="messages[0] && messages[0].images.url" src="messages[0].images.url"></mj-image>
         <mj-text >{{messages[0].title}}</mj-text>
         <mj-text>{{messages[0].summary}}</mj-text>
       </mj-column>
     </mj-section>
-       <mj-section background-color="#f0f0f0">
+       <mj-section background-color="#f0f0f0" v-for="(message, index) in messages.slice(1)" :key="index">
         <mj-column>
-          <mj-text  v-for="message in messages.slice(1)">
+          <mj-text  >
             <a :href="`${organization.website}/announcements/${message.slug}`" >{{message.title}}</a>
-            
           </mj-text>
           <mj-text>
             {{message.summary}}
