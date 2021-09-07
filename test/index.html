@@ -10,9 +10,9 @@
   </mj-head>
   <mj-body v-if="messages && messages[0]" background-color="#ffffff">
     <!-- Header / Preview -->
-    <mj-section>
+    <mj-section :background-color="organization.primaryColor" >
       <mj-column width="100%">
-        <mj-text font-size="10px">{{ title || organization.title }}</mj-text>
+        <mj-text :color="white" font-size="10px">{{ title || organization.title }}</mj-text>
       </mj-column>
     </mj-section>
 
@@ -26,7 +26,7 @@
       <mj-column width="100%">
         <mj-text>
           <h2 style="font-weight: bold; margin-top: 0; margin-bottom: 0"><a :href="`${organization.website}/announcements/${messages[0].slug}`" :style="`color: ${organization.primaryColor}; text-decoration: none;`">
-              {{organization.title}}
+              {{messages[0].title}}
             </a></h2>
           <p v-html="messages[0].summary"></p>
           <p><a :href="`${organization.website}/announcements/${messages[0].slug}`" :style="`color: ${organization.primaryColor}; text-decoration: none;`">
