@@ -1,0 +1,144 @@
+{
+  "organization": {
+    "title": "Academy District 20",
+    "facebook": "https://www.facebook.com/academydistrict20",
+    "twitter": "https://twitter.com/AcademyD20",
+    "website": "https://www.asd20.org",
+    "logoImageUrl": "https://asd20websitestorage.blob.core.windows.net/asd20-images/school-logos/asd20logo.png",
+    "primaryColor": null,
+    "secondaryColor": null
+  },
+  "messages": [
+    {
+      "title": "PowerPass, a library card with more power.",
+      "summary": "Every student in Academy District 20 will now have a Pikes Peak Library District (PPLD) PowerPass. The PowerPass allows students to access useful services to help children learn and play. The PowerPass offers students greater access to digital and on-demand resources.",
+      "images": [],
+      "channels": [
+        {
+          "channel": {
+            "title": "Announcements"
+          }
+        }
+      ],
+      "links": [
+        {
+          "order": 1,
+          "link": {
+            "title": "More about PowerPass",
+            "url": "https://ppld.org/PowerPass",
+            "type": "Call to Action"
+          }
+        },
+        {
+          "order": 2,
+          "link": {
+            "title": "Login to PPLD",
+            "url": "https://ppld.org/catalog/my-account",
+            "type": "Call to Action"
+          }
+        }
+      ],
+      "slug": "power-pass-a-just-for-students-library-card-with-more-power",
+      "ownerOrganization": {
+        "facebook": "https://www.facebook.com/academydistrict20",
+        "instagram": "https://www.instagram.com/academyd20/",
+        "logoImageUrl": "https://asd20websitestorage.blob.core.windows.net/asd20-images/school-logos/asd20logo.png",
+        "title": "Academy District 20",
+        "website": "https://www.asd20.org"
+      }
+    },
+    {
+      "title": "Superintendent Newsletter - August 6, 2021",
+      "summary": "It’s that time of year when I’m excited, hopeful, eager and, to be honest, a little bit nervous. Everywhere I look, there are signs our schools are coming back to life.",
+      "images": [],
+      "channels": [
+        {
+          "channel": {
+            "title": "Announcements"
+          }
+        }
+      ],
+      "links": [],
+      "slug": "superintendent-newsletter-august-6-2021",
+      "ownerOrganization": {
+        "facebook": "https://www.facebook.com/academydistrict20",
+        "instagram": "https://www.instagram.com/academyd20/",
+        "logoImageUrl": "https://asd20websitestorage.blob.core.windows.net/asd20-images/school-logos/asd20logo.png",
+        "title": "Academy District 20",
+        "website": "https://www.asd20.org"
+      }
+    },
+    {
+      "title": "Full COVID-19 Recommendations for Fall 2021",
+      "summary": "We will use&nbsp;El Paso County Public Health’s (EPCPH) updated COVID-19 School and Child Care Guidance&nbsp;to guide decisions.&nbsp;<strong>Specifically, we will follow the EPCPH requirements.</strong>",
+      "images": [],
+      "channels": [
+        {
+          "channel": {
+            "title": "Announcements"
+          }
+        }
+      ],
+      "links": [],
+      "slug": "full-covid-19-recommendations-for-fall-2021",
+      "ownerOrganization": {
+        "facebook": "https://www.facebook.com/academydistrict20",
+        "instagram": "https://www.instagram.com/academyd20/",
+        "logoImageUrl": "https://asd20websitestorage.blob.core.windows.net/asd20-images/school-logos/asd20logo.png",
+        "title": "Academy District 20",
+        "website": "https://www.asd20.org"
+      }
+    },
+    {
+      "title": "COVID-19 Protocols Overview ",
+      "summary": "We are looking forward to starting our school year on Aug. 16, 2021, in-person, five days a week, on a traditional, pre-COVID schedule.&nbsp;",
+      "images": [],
+      "channels": [
+        {
+          "channel": {
+            "title": "Announcements"
+          }
+        }
+      ],
+      "links": [],
+      "slug": "updated-covid-19-protocols",
+      "ownerOrganization": {
+        "facebook": "https://www.facebook.com/academydistrict20",
+        "instagram": "https://www.instagram.com/academyd20/",
+        "logoImageUrl": "https://asd20websitestorage.blob.core.windows.net/asd20-images/school-logos/asd20logo.png",
+        "title": "Academy District 20",
+        "website": "https://www.asd20.org"
+      }
+    },
+    {
+      "title": "Free school supplies available for ASD20 families",
+      "summary": "The Family Resource Center is offering free school supplies for for the upcoming 2021-22 school year.",
+      "images": [],
+      "channels": [
+        {
+          "channel": {
+            "title": "Announcements"
+          }
+        }
+      ],
+      "links": [
+        {
+          "order": 1,
+          "link": {
+            "title": "Visit Family Resource Center",
+            "url": "https://www.asd20.org/family-resource-center/",
+            "type": "Call to Action"
+          }
+        }
+      ],
+      "slug": "free-school-supplies-available-for-asd20-families",
+      "ownerOrganization": {
+        "facebook": "https://www.facebook.com/academydistrict20",
+        "instagram": "https://www.instagram.com/academyd20/",
+        "logoImageUrl": "https://asd20websitestorage.blob.core.windows.net/asd20-images/school-logos/asd20logo.png",
+        "title": "Academy District 20",
+        "website": "https://www.asd20.org"
+      }
+    }
+  ]
+}

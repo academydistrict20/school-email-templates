@@ -2,7 +2,7 @@
   <mj-body>
     <mj-section>
       <mj-column>
-        <mj-image width="100px" v-if="message[0].images.url" src="messages[0].images.url"></mj-image>
+        <mj-image width="100px" v-if="message[0] && message[0].images.url" src="messages[0].images.url"></mj-image>
         <mj-text >{{messages[0].title}}</mj-text>
         <mj-text>{{messages[0].summary}}</mj-text>
       </mj-column>
@@ -10,12 +10,12 @@
        <mj-section background-color="#f0f0f0">
         <mj-column>
           <mj-text  v-for="message in messages.slice(1)">
-            {{message.title}}
+            <a :href="`${organization.website}/announcements/${message.slug}`" >{{message.title}}</a>
+            
           </mj-text>
           <mj-text>
             {{message.summary}}
-            <a :href="message.links.find(l => l.type === 'detail').url">More about {{links.find(l => l.type === 'detail').title}}</a>
-            <mj-button :href="message.links.find(l => l.type === 'Call to Action').title" >message.links.find(l => l.type === 'Call to Action').title</mj-button>
+            <mj-button v-if="message.links && message.links.find(l => l.type === 'Call to Action')" :href="message.links.find(l => l.type === 'Call to Action').title" >message.links.find(l => l.type === 'Call to Action').title</mj-button>
           </mj-text>
         </mj-column>
       </mj-section>
