@@ -54,7 +54,7 @@
               {{message.title}}
             </a> </h3>
           <p style="font-size: 14px">{{message.summary}}</p>
-          <p><a :href="`${organization.website}/announcements/${messages[0].slug}`" :style="`color: ${organization.primaryColor}; text-decoration: none;`">
+          <p><a :href="`${organization.website}/announcements/${messages.slug}`" :style="`color: ${organization.primaryColor}; text-decoration: none;`">
               Read more &rarr;
             </a></p>
         </mj-text>
