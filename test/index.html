@@ -53,7 +53,7 @@
           <h3 style="font-weight: bold; margin-top: 0; margin-bottom: 0"> <a :href="`${organization.website}/announcements/${message.slug}`" :style="`color: ${organization.primaryColor}; text-decoration: none;`">
               {{message.title}}
             </a> </h3>
-          <p style="font-size: 14px">{{message.summary}}</p>
+          <p style="font-size: 14px" v-html="message.summary"></p>
           <p><a :href="`${organization.website}/announcements/${messages.slug}`" :style="`color: ${organization.primaryColor}; text-decoration: none;`">
               Read more &rarr;
             </a></p>
