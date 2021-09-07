@@ -24,18 +24,18 @@
     </mj-section>
     <mj-section>
       <mj-column width="100%">
-        <mj-text >{{subject}}</mj-text>
+        <mj-text >{{messages[0].subject}}</mj-text>
       </mj-column>
     </mj-section>
     <mj-section>
       <mj-column width="100%">
-        <mj-text font-weight="500" font-size="18px">{{title}}</mj-text>
+        <mj-text font-weight="500" font-size="18px">{{messages[0].title}}</mj-text>
       </mj-column>
     </mj-section>
     <mj-section padding-top="30px">
       <mj-column width="100%">
         <mj-text>
-          <p>{{summary}}</p>
+          <p>{{messages[0].summary}}</p>
         </mj-text>
       </mj-column>
     </mj-section>
@@ -53,9 +53,9 @@
       <mj-column width="75%">
         <mj-text>
           <h3 style="font-weight: bold; margin-top: 0; margin-bottom: 0"> <a href="https://blog.recast.ai/module-faster-shadow/" style="color: #3498DB; text-decoration: none">
-              {{messageTitle}}
+              {{messages[0].title}}
             </a> </h3>
-          <p style="font-size: 14px">{{messageSummary}}</p>
+          <p style="font-size: 14px">{{messages[0].summary}}</p>
         </mj-text>
       </mj-column>
     </mj-section>
