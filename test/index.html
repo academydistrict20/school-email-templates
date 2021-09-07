@@ -1,6 +1,6 @@
 <mjml>
   <mj-head>
-    <mj-title>{{messages[0].title}}</mj-title>
+    <mj-title v-if="messages && messages[0]">{{messages[0].title}}</mj-title>
     <mj-font name="Roboto" href="https://fonts.googleapis.com/css?family=Roboto:300,500"></mj-font>
     <mj-attributes>
       <mj-all font-family="Roboto, Helvetica, sans-serif"></mj-all>
@@ -8,55 +8,78 @@
       <mj-section padding="0px"></mj-section>
     </mj-attributes>
   </mj-head>
-  <mj-body>
-    <mj-section padding="20px 0">
-      <mj-column width="60%">
+  <mj-body v-if="messages && messages[0]" background-color="#ffffff">
+    <!-- Header / Preview -->
+    <mj-section>
+      <mj-column width="40%">
         <mj-text font-size="10px">{{messages[0].title}}</mj-text>
       </mj-column>
-      <mj-column width="40%">
-        <mj-text align="right">{{messages[0].url}}</mj-text>
+      <mj-column width="60%">
+        <mj-text font-size="10px" align="right">{{messages[0].url}}</mj-text>
+      </mj-column>
+    </mj-section>
+
+    <!-- First Message -->
+    <mj-section v-if="messages[0].firstImage">
+      <mj-column width="100%">
+        <mj-image :src="messages[0].firstImage.url"></mj-image>
       </mj-column>
     </mj-section>
     <mj-section>
-      <mj-column width="100%">
-        <mj-image src="https://placeimg.com/640/200/any"></mj-image>
-      </mj-column>
-    </mj-section>
-    <mj-section>
-      <mj-column width="100%">
-        <mj-text >{{messages[0].subject}}</mj-text>
-      </mj-column>
-    </mj-section>
-    <mj-section>
-      <mj-column width="100%">
-        <mj-text font-weight="500" font-size="18px">{{messages[0].title}}</mj-text>
-      </mj-column>
-    </mj-section>
-    <mj-section padding-top="30px">
       <mj-column width="100%">
         <mj-text>
+          <h2 style="font-weight: bold; margin-top: 0; margin-bottom: 0"><a :href="`${organization.website}/announcements/${message[0].slug}`" style="color: #3498DB; text-decoration: none">
+              {{messages[0].title}}
+            </a></h2>
           <p>{{messages[0].summary}}</p>
         </mj-text>
       </mj-column>
     </mj-section>
     
+    <!-- Additional Messages -->
     <mj-section>
       <mj-column width="100%">
         <mj-divider border-width="1px" border-color="#E0E0E0"></mj-divider>
       </mj-column>
     </mj-section>
-    <mj-section>
-      <mj-column width="25%">
-        <mj-image width="100px" href="https://blog.recast.ai/module-faster-shadow/" src="https://cdn.recast.ai/newsletter/183.png"></mj-image>
+
+    <mj-section v-for="(message, index) in messages.slice(1)" :key="index">
+      <mj-column width="25%" v-if="message.firstImage">
+        <mj-image width="100px" :href="`${organization.website}/announcements/${message.slug}`" :src="message.firstImage.url"></mj-image>
       </mj-column>
 
       <mj-column width="75%">
         <mj-text>
           <h3 style="font-weight: bold; margin-top: 0; margin-bottom: 0"> <a href="https://blog.recast.ai/module-faster-shadow/" style="color: #3498DB; text-decoration: none">
-              {{messages[0].title}}
+              {{message.title}}
             </a> </h3>
-          <p style="font-size: 14px">{{messages[0].summary}}</p>
+          <p style="font-size: 14px">{{message.summary}}</p>
         </mj-text>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column width="100%">
+        <mj-divider border-width="1px" border-color="#E0E0E0"></mj-divider>
+      </mj-column>
+    </mj-section>
+
+    <mj-section>
+      <mj-column>
+        <mj-social font-size="10px" icon-size="16px" mode="horizontal" align="left">
+          <mj-social-element  name="web-noshare" :href="organization.twitter" v-if="organization.twitter">
+            Website
+          </mj-social-element>
+          <mj-social-element name="facebook-noshare" :href="organization.facebook" v-if="organization.facebook">
+            Facebook
+          </mj-social-element>
+          <mj-social-element name="instagram-noshare" :href="organization.instagram" v-if="organization.instagram">
+            Instagram
+          </mj-social-element>
+          <mj-social-element  name="twitter-noshare" :href="organization.twitter" v-if="organization.twitter">
+            Twitter
+          </mj-social-element>
+        </mj-social>
       </mj-column>
     </mj-section>
     
