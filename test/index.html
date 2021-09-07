@@ -44,11 +44,11 @@
     </mj-section>
 
     <mj-section v-for="(message, index) in messages.slice(1)" :key="index">
-      <mj-column width="20%" v-if="message.firstImage">
+      <mj-column width="25%" padding-right="0px" v-if="message.firstImage">
         <mj-image width="100px" :href="`${organization.website}/announcements/${message.slug}`" :src="message.firstImage.url"></mj-image>
       </mj-column>
 
-      <mj-column width="80%">
+      <mj-column width="75%">
         <mj-text>
           <h3 style="font-weight: bold; margin-top: 0; margin-bottom: 0"> <a :href="`${organization.website}/announcements/${message.slug}`" :style="`color: ${organization.primaryColor}; text-decoration: none;`">
               {{message.title}}
