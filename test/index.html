@@ -25,10 +25,13 @@
     <mj-section>
       <mj-column width="100%">
         <mj-text>
-          <h2 style="font-weight: bold; margin-top: 0; margin-bottom: 0"><a :href="`${organization.website}/announcements/${messages[0].slug}`" :style="`color: ${organization.primaryColor}`">
+          <h2 style="font-weight: bold; margin-top: 0; margin-bottom: 0"><a :href="`${organization.website}/announcements/${messages[0].slug}`" :style="`color: ${organization.primaryColor}; text-decoration: none;`">
               {{messages[0].title}}
             </a></h2>
           <p v-html="messages[0].summary"></p>
+          <p><a :href="`${organization.website}/announcements/${messages[0].slug}`" :style="`color: ${organization.primaryColor}; text-decoration: none;`">
+              Read more &rarr;
+            </a></p>
         </mj-text>
       </mj-column>
     </mj-section>
@@ -47,10 +50,13 @@
 
       <mj-column width="75%">
         <mj-text>
-          <h3 style="font-weight: bold; margin-top: 0; margin-bottom: 0"> <a :href="`${organization.website}/announcements/${message.slug}`" :style="`color: ${organization.primaryColor}`">
+          <h3 style="font-weight: bold; margin-top: 0; margin-bottom: 0"> <a :href="`${organization.website}/announcements/${message.slug}`" :style="`color: ${organization.primaryColor}; text-decoration: none;`">
               {{message.title}}
             </a> </h3>
           <p style="font-size: 14px">{{message.summary}}</p>
+          <p><a :href="`${organization.website}/announcements/${messages[0].slug}`" :style="`color: ${organization.primaryColor}; text-decoration: none;`">
+              Read more &rarr;
+            </a></p>
         </mj-text>
       </mj-column>
     </mj-section>
