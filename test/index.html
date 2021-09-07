@@ -1,0 +1,64 @@
+<mjml>
+  <mj-head>
+    <mj-title>{{messages[0].title}}</mj-title>
+    <mj-font name="Roboto" href="https://fonts.googleapis.com/css?family=Roboto:300,500"></mj-font>
+    <mj-attributes>
+      <mj-all font-family="Roboto, Helvetica, sans-serif"></mj-all>
+      <mj-text font-weight="300" font-size="16px" color="#616161" line-height="24px"></mj-text>
+      <mj-section padding="0px"></mj-section>
+    </mj-attributes>
+  </mj-head>
+  <mj-body>
+    <mj-section padding="20px 0">
+      <mj-column width="60%">
+        <mj-text font-size="10px">{{messages[0].title}}</mj-text>
+      </mj-column>
+      <mj-column width="40%">
+        <mj-text align="right">{{messages[0].url}}</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column width="100%">
+        <mj-image src="https://placeimg.com/640/200/any"></mj-image>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column width="100%">
+        <mj-text >{{subject}}</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column width="100%">
+        <mj-text font-weight="500" font-size="18px">{{title}}</mj-text>
+      </mj-column>
+    </mj-section>
+    <mj-section padding-top="30px">
+      <mj-column width="100%">
+        <mj-text>
+          <p>{{summary}}</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+    <mj-section>
+      <mj-column width="100%">
+        <mj-divider border-width="1px" border-color="#E0E0E0"></mj-divider>
+      </mj-column>
+    </mj-section>
+    <mj-section>
+      <mj-column width="25%">
+        <mj-image width="100px" href="https://blog.recast.ai/module-faster-shadow/" src="https://cdn.recast.ai/newsletter/183.png"></mj-image>
+      </mj-column>
+
+      <mj-column width="75%">
+        <mj-text>
+          <h3 style="font-weight: bold; margin-top: 0; margin-bottom: 0"> <a href="https://blog.recast.ai/module-faster-shadow/" style="color: #3498DB; text-decoration: none">
+              {{messageTitle}}
+            </a> </h3>
+          <p style="font-size: 14px">{{messageSummary}}</p>
+        </mj-text>
+      </mj-column>
+    </mj-section>
+    
+  </mj-body>
+</mjml>
