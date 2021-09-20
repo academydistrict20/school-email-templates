@@ -153,7 +153,7 @@ async function getTemplateStrings(template) {
 
 
 const run = async () => {
-  const templates = ['base'];
+  const templates = ['base','info-message'];
   console.log(`Generating ${templates.join(', ')}`);
   const templateStrings = await Promise.all(templates.map(async t => ({ name: t, template: await getTemplateStrings(t) })));
   console.log(`${templateStrings.length} templates loaded`)
